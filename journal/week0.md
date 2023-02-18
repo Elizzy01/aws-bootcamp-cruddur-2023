@@ -5,7 +5,7 @@
  - Created Github repo
  - Set up Gitpod account 
 
-##Required Homework
+## Required Homework
 1. Attended the live stream
 2. Watched the follow up videos for Week 0 - Generating credentials, Budget, Billing Alarms, AWS CLI videos
 3. Took certain security considerations on setting up the account
