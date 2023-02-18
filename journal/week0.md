@@ -9,14 +9,16 @@
 1. Attended the live stream
 2. Watched the follow up videos for Week 0 - Generating credentials, Budget, Billing Alarms, AWS CLI videos
 3. Took certain security considerations on setting up the account
-  - I set up an AWS organization and my bootcamp account as a sub-account.
-  - I activated MFA
+  - I set up an AWS organization and my bootcamp account as a sub-account. - *Even though I had created the account some months back. I retained the account because I have some credits on it which I would like to use for the bootcamp.*
+  - I activated MFA on my account and root account using a virtual MFA app on my mobile phone called **Authy by Twilio**
+  
   ![Security considerations for my user account](assets/Week%200-IAM%20security%20recommendations.png)
   
   - I gave my user admin role.
-![Admin role to my IAM user](assets/Week0-IAM%20admin%20role.png)
+![Admin role to my IAM user](assets/Week0%20-AWS%20Admin%20-user.png)
 4. I created Architectural diagram, both the **Conceptual** and the **Logical** diagrams on Lucid Chart. I also did a little work with napkin.
 Napkin
+   ![Napkin Diagram](assets/Week0%20-%20Napkin%20image.jpg)
   - [Cruddur Conceptual Diagram](https://lucid.app/lucidchart/d0099a6b-c439-49d6-9cd0-6ae210eb165e/edit?invitationId=inv_542f629e-965d-4657-8013-154f306e223e)
    
    ![Conceptual Diagram](assets/_Cruddur%20-%20Conceptual%20Diagram%20(1).png)
@@ -25,3 +27,4 @@ Napkin
   ![Conceptual Diagram](assets/Cruddur%20Logical%20Architecture%20Diagram%20(1).png)
    
 5.Used Cloudshell in us-east-1 region and it worked so well. :)
+![Cloudshell showing AWS Credentials](assets/Week0%20-AWS%20Cloudshell.png)
