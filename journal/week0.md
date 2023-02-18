@@ -11,6 +11,7 @@
 3. Took certain security considerations on setting up the account
   - I set up an AWS organization and my bootcamp account as a sub-account.
   - I activated MFA
+  ![Security considerations for my user account](assets/)
   - I gave my user admin role.
 {Insert the IAM image showing the MFA + admin role}
 4. I created Architectural diagram, both the **Conceptual** and the **Logical** diagrams on Lucid Chart. I also did a little work with napkin.
