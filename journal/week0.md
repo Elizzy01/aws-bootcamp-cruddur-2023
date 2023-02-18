@@ -28,3 +28,9 @@ Napkin
    
 5.Used Cloudshell in us-east-1 region and it worked so well. :)
 ![Cloudshell showing AWS Credentials](assets/Week0%20-AWS%20Cloudshell.png)
+
+6. I created Access key on my IAM console under the user security credentials. I then used Generated AWS Credentials - Access Key/Secret pair for cruddur-admin user. Added persistent Gitpod variables to store AWS credentials for resuse using these commands:
+
+`gp env AWS_ACCESS_KEY_ID=""
+gp env AWS_SECRET_ACCESS_KEY=""
+gp env AWS_DEFAULT_REGION=""`
