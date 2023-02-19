@@ -35,14 +35,33 @@ Napkin
 ![Cloudshell showing AWS Credentials](assets/Week0%20-AWS%20Cloudshell.png)
 
 6. I created Access key on my IAM console under the user security credentials. I then used Generated AWS Credentials - Access Key/Secret pair for cruddur-admin user. Added persistent Gitpod variables to store AWS credentials for resuse using these commands:
-
-`gp env AWS_ACCESS_KEY_ID=""` 
-`gp env AWS_SECRET_ACCESS_KEY=""`
-`gp env AWS_DEFAULT_REGION=""`
+```
+gp env AWS_ACCESS_KEY_ID=""
+gp env AWS_SECRET_ACCESS_KEY=""
+gp env AWS_DEFAULT_REGION=""
+```
 
 7. Environment Variables in Gitpod
-8. Installed AWS CLI for Gitpod using this video. Manually installed, but also edited .gitpod.yml to auto-install if the environment gets restarted.
+8. Installed AWS CLI for Gitpod using [this video.](https://www.youtube.com/watch?v=OdUnNuKylHg) Manually installed, but also edited .gitpod.yml to auto-install if the environment gets restarted.
+```
+tasks:
+  - name: aws-cli
+    env:
+      AWS_CLI_AUTO_PROMPT: on-partial
+    init: |
+      cd /workspace
+      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      unzip awscliv2.zip
+      sudo ./aws/install
+      cd $THEIA_WORKSPACE_ROOT
+```
+Confirmed in Gitpod [User Settings > Variables](https://gitpod.io/user/variables) that variables are saved:
 
+![Gitpod variables](assets/week0/GitpodVariables.png)
+
+Started up a new Gitpod environment to confirm AWS CLI was installed correctly and AWS credentials were pulled from Gitpod variables to environment variables.  Successfully ran ```aws sts get-caller-identity``` and returned values.
+
+   
 ## Homework Challenges
   - Created Architecture diagram on Napkins
   - ### AWSEventbridge
