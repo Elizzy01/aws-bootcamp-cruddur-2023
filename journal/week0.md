@@ -36,10 +36,18 @@ Napkin
 
 6. I created Access key on my IAM console under the user security credentials. I then used Generated AWS Credentials - Access Key/Secret pair for cruddur-admin user. Added persistent Gitpod variables to store AWS credentials for resuse using these commands:
 
-`gp env AWS_ACCESS_KEY_ID="" 
-gp env AWS_SECRET_ACCESS_KEY=""
-gp env AWS_DEFAULT_REGION=""`
+`gp env AWS_ACCESS_KEY_ID=""` 
+`gp env AWS_SECRET_ACCESS_KEY=""`
+`gp env AWS_DEFAULT_REGION=""`
+
+7. Environment Variables in Gitpod
+8. Installed AWS CLI for Gitpod using this video. Manually installed, but also edited .gitpod.yml to auto-install if the environment gets restarted.
 
 ## Homework Challenges
   - Created Architecture diagram on Napkins
-  - 
+  - ### AWSEventbridge
+   I created a rule to hook up the Health Dashboard to SNS and send notification when there is a service health issue.
+  - ### Opened Support ticket for my EC2 instance
+  I opened a suppoprt ticket because I was almost using up the free tier service for this month. I have used 742hrs of my 750hrs for this month.
+  - ### AWS Credits
+   I got a $100 credit from the Mongodb AWS Marketplace event. 
