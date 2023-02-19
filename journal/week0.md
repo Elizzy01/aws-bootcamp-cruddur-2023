@@ -8,7 +8,8 @@
 ## Required Homework
 1. Attended the live stream
 2. Watched the follow up videos for Week 0 - Generating credentials, Budget, Billing Alarms, AWS CLI videos
-###Account security
+
+### Account security
 3. Took certain security considerations on setting up the account
     - I set up an AWS organization and my bootcamp account as a sub-account. - *Even though I had created the account some months back. I retained the account because I have some credits on it which I would like to use for the bootcamp.*
     - I activated MFA on my account and root account using a virtual MFA app on my mobile phone called **Authy by Twilio**
@@ -18,7 +19,8 @@
     - I gave my user admin role.
 ![Admin role to my IAM user](assets/Week0%20-AWS%20Admin%20-user.png)
 
-###Architecture Diagrams
+### Architecture Diagrams
+
 4. I created Architectural diagram, both the **Conceptual** and the **Logical** diagrams on Lucid Chart. I also did a little work with napkin.
 Napkin
    ![Napkin Diagram](assets/Week0%20-%20Napkin%20image.jpg)
@@ -38,6 +40,6 @@ Napkin
 gp env AWS_SECRET_ACCESS_KEY=""
 gp env AWS_DEFAULT_REGION=""`
 
-##Homework Challenges
+## Homework Challenges
   - Created Architecture diagram on Napkins
   - 
