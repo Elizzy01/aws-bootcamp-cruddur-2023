@@ -113,7 +113,7 @@ I received an insufficient data state on one of my alarms, so I will wait to see
 
 11. Free tier service check
 *  I checked service limits of specific services in my account under the free tier and how they could impact billing.
-/assets/Week%200-Free%20tier.png
+![Free tier check](assets/Week%200-Free%20tier.png)
 
 *  I am almost using up my free tier services on EC2 for February. I have currently used 742hrs of 750 hrs so I'm opening up a support ticket to request a prolonged service limit.
   
@@ -123,7 +123,7 @@ I received an insufficient data state on one of my alarms, so I will wait to see
 ## Homework Challenges
   - Created Architecture diagram on Napkins
   - ### AWSEventbridge
-   I created a rule to hook up the Health Dashboard to SNS and send notification when there is a service health issue. Follow the steps [here.](https://www.example.com](https://docs.aws.amazon.com/health/latest/ug/cloudwatch-events-health.html)
+   I created a rule to hook up the Health Dashboard to SNS and send notification when there is a service health issue. Follow the steps [here.](https://docs.aws.amazon.com/health/latest/ug/cloudwatch-events-health.html)
    ![EventBridge set-up](assets/Week0-%20Eventbridge%20(2).png) 
    
   - ### Opened Support ticket for my EC2 instance
