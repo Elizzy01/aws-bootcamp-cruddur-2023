@@ -123,7 +123,7 @@ I received an insufficient data state on one of my alarms, so I will wait to see
 ## Homework Challenges
   - Created Architecture diagram on Napkins
   - ### AWSEventbridge
-   I created a rule to hook up the Health Dashboard to SNS and send notification when there is a service health issue. Follow the steps [here.]([https://www.example.com](https://docs.aws.amazon.com/health/latest/ug/cloudwatch-events-health.html)
+   I created a rule to hook up the Health Dashboard to SNS and send notification when there is a service health issue. Follow the steps [here.](https://www.example.com](https://docs.aws.amazon.com/health/latest/ug/cloudwatch-events-health.html)
    ![EventBridge set-up](assets/Week0-%20Eventbridge%20(2).png) 
    
   - ### Opened Support ticket for my EC2 instance
