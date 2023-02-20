@@ -41,8 +41,7 @@ gp env AWS_SECRET_ACCESS_KEY=""
 gp env AWS_DEFAULT_REGION=""
 ```
 
-7. Environment Variables in Gitpod
-8. Installed AWS CLI for Gitpod using [this video.](https://www.youtube.com/watch?v=OdUnNuKylHg) Manually installed, but also edited .gitpod.yml to auto-install if the environment gets restarted.
+7. Installed AWS CLI for Gitpod using [this video.](https://www.youtube.com/watch?v=OdUnNuKylHg) Manually installed, but also edited .gitpod.yml to auto-install if the environment gets restarted.
 ```
 tasks:
   - name: aws-cli
@@ -55,18 +54,81 @@ tasks:
       sudo ./aws/install
       cd $THEIA_WORKSPACE_ROOT
 ```
+
+8. Environment Variables in Gitpod
 Confirmed in Gitpod [User Settings > Variables](https://gitpod.io/user/variables) that variables are saved:
 
-![Gitpod variables](assets/week0/GitpodVariables.png)
+![Gitpod variables](assets/Week%200-%20Gitpod%20Variables.png)
 
 Started up a new Gitpod environment to confirm AWS CLI was installed correctly and AWS credentials were pulled from Gitpod variables to environment variables.  Successfully ran ```aws sts get-caller-identity``` and returned values.
+
+9.  Created a Budget
+
+  * Used the JSON from [this article](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/budgets/create-budget.html) to create a billing budget.  
+  * I created two budgets, one for my credits and the other for my zero-bootcamp spend. 
+  ![Budget set-up](assets/Week%200-Budgets.png)
+  
+   I configured the JSON files in the aws/json directory and ran the following command to create the budget:
+
+  ```
+  aws budgets create-budget \
+    --account-id $AWS_ACCOUNT_ID \
+    --budget file://aws-budget.json \
+    --notifications-with-subscribers file://aws-budget-notifications-with-subscribers.json
+  ```
+
+  * Note that I have the AWS Account ID set as an environment variable in Gitpod so it can automatically be retrieved on workspace launch, rather than hardcoding.  I set this up in Gitpod via CLI using:
+  
+  ```
+  gp env AWS_ACCOUNT_ID=""
+  ```
+
+  * I also created an SNS topic as a billing alarm, to email me if the usage is at 50%, 80% and $100.  I ran the following to create a Topic ARN, and once it was generated, ran the next command to subscribe SNS to the billing alarm and to notify me when in alarm:
+
+  ```
+  aws sns create-topic --name billing-alarm
+
+  aws sns subscribe \
+    --topic-arn="<billing-alarm-arn>" \
+    --protocol=email \
+    --notification-endpoint=emailaddress@gmail.com
+```
+
+* I checked my email address, and confirmed the subscription so AWS will email me if the billing alarm goes off:
+
+  
+10.  Created a Billing Alarm (after Budget)
+
+* [Used this document](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html) to set up a billing alarm using CloudWatch.
+* Configured JSON file [here](../aws/json/aws-metric-alarm-config.json) with settings to breach alarm at $10 usage on one data point, and ran the following command in AWS CLI to set it up:
+
+```
+aws cloudwatch put-metric-alarm --cli-input-json file://aws-metric-alarm-config.json
+```
+
+I received an insufficient data state on one of my alarms, so I will wait to see if it addresses itself once data starts being tracked properly.
+
+
+![Alarm set-up](assets/Week%200%20-%20Alarms.png)
+
+11. Free tier service check
+*  I checked service limits of specific services in my account under the free tier and how they could impact billing.
+/assets/Week%200-Free%20tier.png
+
+*  I am almost using up my free tier services on EC2 for February. I have currently used 742hrs of 750 hrs so I'm opening up a support ticket to request a prolonged service limit.
+  
+
 
    
 ## Homework Challenges
   - Created Architecture diagram on Napkins
   - ### AWSEventbridge
    I created a rule to hook up the Health Dashboard to SNS and send notification when there is a service health issue.
+   ![EventBridge set-up](assets/Week%200%20-%20Alarms.png)
+   
   - ### Opened Support ticket for my EC2 instance
   I opened a suppoprt ticket because I was almost using up the free tier service for this month. I have used 742hrs of my 750hrs for this month.
+  
   - ### AWS Credits
    I got a $100 credit from the Mongodb AWS Marketplace event. 
+ ![AWS Credits](assets/Week%200-%20Credits.png)
