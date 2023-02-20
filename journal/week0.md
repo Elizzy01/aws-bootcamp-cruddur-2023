@@ -123,11 +123,11 @@ I received an insufficient data state on one of my alarms, so I will wait to see
 ## Homework Challenges
   - Created Architecture diagram on Napkins
   - ### AWSEventbridge
-   I created a rule to hook up the Health Dashboard to SNS and send notification when there is a service health issue.
-   ![EventBridge set-up](assets/Week%200%20-%20Alarms.png)
+   I created a rule to hook up the Health Dashboard to SNS and send notification when there is a service health issue. Follow the steps [here.]([https://www.example.com](https://docs.aws.amazon.com/health/latest/ug/cloudwatch-events-health.html))
+   ![EventBridge set-up](assets/Week0-%20Eventbridge%20(2).png) 
    
   - ### Opened Support ticket for my EC2 instance
-  I opened a suppoprt ticket because I was almost using up the free tier service for this month. I have used 742hrs of my 750hrs for this month.
+  I opened a suppoprt ticket because I was almost using up the free tier service for this month. I have used 742hrs of my 750hrs for this month. Check the steps [here.](https://docs.aws.amazon.com/awssupport/latest/user/create-service-quota-increase.html)
   
   - ### AWS Credits
    I got a $100 credit from the Mongodb AWS Marketplace event. 
