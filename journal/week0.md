@@ -128,6 +128,8 @@ I received an insufficient data state on one of my alarms, so I will wait to see
    
   - ### Opened Support ticket for my EC2 instance
   I opened a suppoprt ticket because I was almost using up the free tier service for this month. I have used 742hrs of my 750hrs for this month. Check the steps [here.](https://docs.aws.amazon.com/awssupport/latest/user/create-service-quota-increase.html)
+  ![Support ticket](assets/Week%200%20-%20Support%20ticket%20case.png) 
+    
   
   - ### AWS Credits
    I got a $100 credit from the Mongodb AWS Marketplace event. 
