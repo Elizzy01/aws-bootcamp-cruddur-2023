@@ -2,7 +2,7 @@
 
 ## Required Homework
 
-### Required Tasks
+### Tasks
 
 * I  Watched [How to Ask for Technical Help](https://youtu.be/tDPqmwKMP7Y) video.
 * I Watched [Grading Homework Summaries](https://youtu.be/FKAScachFgk) video.
