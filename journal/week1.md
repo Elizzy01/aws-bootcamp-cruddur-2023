@@ -33,4 +33,4 @@
 
   * Added steps to install PostgreSQL Client into [.gitpod.Dockerfile](../.gitpod.Dockerfile) and tested using ```psql -h localhost -p 5432 -U postgres -d postgres```
  
-![image](../_docs/assets/week1/PostgresClientTest.png)
+![Postgres](assets/Week%201%20-Postgres.png)
