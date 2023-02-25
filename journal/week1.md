@@ -29,7 +29,7 @@
 
   * Tested connecting to DynamoDB Local using ```aws dynamodb list-tables --endpoint-url http://localhost:8000``` which returned empty table info successfully. 
  
-![image](../_docs/assets/week1/DynamoDBTest.png)  
+![Dynamodb](assets/Week%201%20-%20Dynamodb.png)  
 
   * Added steps to install PostgreSQL Client into [.gitpod.Dockerfile](../.gitpod.Dockerfile) and tested using ```psql -h localhost -p 5432 -U postgres -d postgres```
  
