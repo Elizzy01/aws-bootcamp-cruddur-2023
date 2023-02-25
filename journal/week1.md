@@ -17,14 +17,16 @@
 
 * Completed all steps during the livestream to containerize the application.
   * Reviewed notes and code in [Github - Week 1](https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-1/journal/week1.md).
-  * I containerized my backend and frontend filkes using Docker. Docker for VSCode makes it easy to work with Docker while in VScode
+  * I containerized my backend and frontend filkes using Docker. Docker for VSCode makes it easy to work with Docker while in VScode.
+  
    ![Dockerfile running](assets/docker%20built.png)  
 
 * Went through [video](https://youtu.be/k-_o0cCpksk) steps and added frontend and backend notifications functionality.
   * Documented notification endpoint for OpenAPI document.
   * Wrote Flask backend endpoint for notifications.
   * Wrote React page for notifications. 
-  ![Working web page]()  
+  
+  ![Working web page](assets/Week%201%20-%20Cruddur%20Notification.PNG)  
   
 * Went through [video](https://youtu.be/CbQNMaa6zTg) steps to set up PostgreSQL and DynamoDB Local
   * Ran DynamoDB Local container to ensure it worked
