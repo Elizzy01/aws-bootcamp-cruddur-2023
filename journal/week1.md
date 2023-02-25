@@ -17,6 +17,7 @@
 
 * Completed all steps during the livestream to containerize the application.
   * Reviewed notes and code in [Github - Week 1](https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-1/journal/week1.md).
+  * I created a docker-compose file to help define and share multi-container applications.
   * I containerized my backend and frontend filkes using Docker. Docker for VSCode makes it easy to work with Docker while in VScode.
   
    ![Dockerfile running](assets/docker%20built.png)  
