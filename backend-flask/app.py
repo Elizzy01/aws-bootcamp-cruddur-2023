@@ -58,14 +58,14 @@ tracer = trace.get_tracer(__name__)
 
 
 #X-Ray-----------
-#xray_url = os.getenv("AWS_XRAY_URL")
-#xray_recorder.configure(service='Cruddur', dynamic_naming=xray_url)
+xray_url = os.getenv("AWS_XRAY_URL")
+xray_recorder.configure(service='Cruddur', dynamic_naming=xray_url)
 
 
 app = Flask(__name__)
 
 #X-Ray-----------
-#XRayMiddleware(app, xray_recorder)
+XRayMiddleware(app, xray_recorder)
 
 #Honeycomb--------------
 # Initialize automatic instrumentation with Flask
